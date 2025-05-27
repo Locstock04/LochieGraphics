@@ -17,6 +17,7 @@
 #include "Spotlight.h"
 #include "DirectionalLight.h"
 #include "InvisibleWall.h"
+#include "Freestyle.h"
 
 #include "RenderSystem.h"
 #include "PhysicsSystem.h"
@@ -74,6 +75,7 @@ public:
 	std::unordered_map<unsigned long long, Spotlight> spotlights = {};
 	std::unordered_map<unsigned long long, Decal> decals = {};
 	std::unordered_map<unsigned long long, ShadowWall> shadowWalls = {};
+	std::unordered_map<unsigned long long, Freestyle> freestyles = {};
 
 	DirectionalLight directionalLight;
 

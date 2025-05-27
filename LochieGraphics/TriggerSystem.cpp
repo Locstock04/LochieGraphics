@@ -10,6 +10,7 @@
 #include "Triggerable.h"
 #include "Spotlight.h"
 #include "PressurePlate.h"
+#include "Freestyle.h"
 #include <iostream>
 
 std::multimap<std::string, unsigned long long> TriggerSystem::triggerables = {};
@@ -31,7 +32,8 @@ void TriggerSystem::Start(
 	std::unordered_map<unsigned long long, Door>& doors,
 	std::unordered_map<unsigned long long, Bollard>& bollards,
 	std::unordered_map<unsigned long long, Triggerable>& triggerables,
-	std::unordered_map<unsigned long long, Spotlight>& spotlights
+	std::unordered_map<unsigned long long, Spotlight>& spotlights,
+	std::unordered_map<unsigned long long, Freestyle>& freestyles
 )
 {
 	TriggerSystem::triggerables.clear();
@@ -56,6 +58,12 @@ void TriggerSystem::Start(
 	{
 		TriggerSystem::triggerables.insert({ pair.second.triggerTag, pair.first });
 	}
+
+	for (auto& pair : freestyles)
+	{
+		TriggerSystem::triggerables.insert({ pair.second.triggerTag, pair.first });
+	}
+
 	for (auto& pair : triggerables)
 	{
 		SceneObject* so = SceneManager::scene->sceneObjects[pair.first];

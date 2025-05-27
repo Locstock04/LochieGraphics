@@ -464,6 +464,12 @@
     <ClCompile Include="Decal.cpp">
       <Filter>Source Files\Parts</Filter>
     </ClCompile>
+    <ClCompile Include="HealthRangeCondition.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Freestyle.cpp">
+      <Filter>Source Files\Parts</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Server.h">
@@ -834,6 +840,10 @@
     </ClInclude>
     <ClInclude Include="AnimationFinishedCondition.h">
       <Filter>Source Files\State Machine\Conditions</Filter>
+    </ClInclude>
+    <ClInclude Include="HealthRangeCondition.h" />
+    <ClInclude Include="Freestyle.h">
+      <Filter>Source Files\Parts</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

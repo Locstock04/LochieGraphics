@@ -131,6 +131,7 @@ void SceneObject::GUI()
 	if (parts & Parts::plate) { scene->plates[GUID].GUI(); }
 	if (parts & Parts::door) { scene->doors[GUID].GUI(); }
 	if (parts & Parts::bollard) { scene->bollards[GUID].GUI(); }
+	if (parts & Parts::freestyle) { scene->freestyles[GUID].GUI(); }
 	if (parts & Parts::triggerable) { scene->triggerables[GUID].GUI(); }
 	if (parts & Parts::pointLight) { scene->pointLights[GUID].GUI(); }
 	if (parts & Parts::spotlight) { scene->spotlights[GUID].GUI(); }
@@ -186,6 +187,7 @@ void SceneObject::GUI()
 		}
 		AddPartGUI(enemy, setEnemy, Enemy, ("Enemy##Add part" + tag).c_str());
 		AddPartGUI(exitElevator, setExitElevator, ExitElevator, ("Exit Elevator##Add part" + tag).c_str());
+		AddPartGUI(freestyle, setFreestyle, Freestyle, ("Freestyle##Add part" + tag).c_str());
 		AddPartGUI(health, setHealth, Health, ("Health##Add part" + tag).c_str());
 		AddPartGUI(plate, setPressurePlate, PressurePlate, ("Pressure Plate ##Add part" + tag).c_str());
 		AddPartGUI(pointLight, setPointLight, PointLight, ("Point Light##Add part" + tag).c_str());
@@ -229,6 +231,7 @@ void SceneObject::GUI()
 		}
 		RemovePartGUI(enemy, setEnemy, ("Enemy##Remove part" + tag).c_str());
 		RemovePartGUI(exitElevator, setExitElevator, ("Exit##Remove part" + tag).c_str());
+		RemovePartGUI(freestyle, setFreestyle, ("Freestyle##Remove part" + tag).c_str());
 		RemovePartGUI(health, setHealth, ("Health##Remove part" + tag).c_str());
 		RemovePartGUI(modelRenderer, setRenderer, ("Model Renderer##Remove part" + tag).c_str());
 		RemovePartGUI(plate, setPressurePlate, ("Pressure Plate##Remove part" + tag).c_str());
@@ -369,6 +372,7 @@ bool SceneObject::PartsFilterSelector(const std::string& label, unsigned int& pa
 	ImGui::CheckboxFlags("Ecco##Parts Filter", &parts, Parts::ecco);
 	ImGui::CheckboxFlags("Enemy##Parts Filter", &parts, Parts::enemy);
 	ImGui::CheckboxFlags("Exit Elevator##Parts Filter", &parts, Parts::exitElevator);
+	ImGui::CheckboxFlags("Freestyle##Parts Filter", &parts, Parts::freestyle);
 	ImGui::CheckboxFlags("Plate##Parts Filter", &parts, Parts::plate);
 	ImGui::CheckboxFlags("PointLight##Parts Filter", &parts, Parts::pointLight);
 	ImGui::CheckboxFlags("RigidBody##Parts Filter", &parts, Parts::rigidBody);
@@ -440,6 +444,9 @@ void SceneObject::TriggerCall(std::string tag, bool toggle)
 	if (parts & Parts::bollard)
 		scene->bollards[GUID].TriggerCall(tag, toggle);
 
+	if (parts & Parts::freestyle)
+		scene->freestyles[GUID].TriggerCall(tag, toggle);
+
 	if (parts & Parts::pointLight)
 		scene->pointLights[GUID].TriggerCall(tag, toggle);
 
@@ -489,6 +496,7 @@ toml::table SceneObject::SerialiseWithParts() const
 	SavePart("plate", plate, plates);
 	SavePart("door", door, doors);
 	SavePart("bollard", bollard, bollards);
+	SavePart("freestyle", freestyle, freestyles);
 	SavePart("triggerable", triggerable, triggerables);
 	SavePart("spotlight", spotlight, spotlights); 
 	SavePart("decal", decal, decals);
@@ -579,6 +587,7 @@ SetAndGetForPart(SpawnManager, spawnManagers, Parts::spawnManager, SpawnManager,
 SetAndGetForPart(PressurePlate, plates, Parts::plate, PressurePlate, plate)
 SetAndGetForPart(Door, doors, Parts::door, Door, door)
 SetAndGetForPart(Bollard, bollards, Parts::bollard, Bollard, bollard)
+SetAndGetForPart(Freestyle, freestyles, Parts::freestyle, Freestyle, freestyle)
 SetAndGetForPart(Triggerable, triggerables, Parts::triggerable, Triggerable, triggerable)
 SetAndGetForPart(PointLight, pointLights, Parts::pointLight, PointLight, pointLight)
 SetAndGetForPart(Decal, decals, Parts::decal, Decal, decal);
@@ -698,6 +707,7 @@ void SceneObject::ClearParts(unsigned int toDelete)
 	if (toDelete & parts & Parts::spotlight)	 { scene->spotlights.erase(GUID);	 parts &= ~(Parts::spotlight);}	
 	if (toDelete & parts & Parts::decal)		 { scene->decals.erase(GUID);	     parts &= ~(Parts::decal);}	
 	if (toDelete & parts & Parts::shadowWall)	 { scene->shadowWalls.erase(GUID);	 parts &= ~(Parts::shadowWall);}	
+	if (toDelete & parts & Parts::freestyle)	 { scene->freestyles.erase(GUID);	 parts &= ~(Parts::freestyle);}	
 }
 
 void SceneObject::ClearParts()
@@ -748,6 +758,7 @@ void SceneObject::LoadWithParts(toml::table table)
 	LoadPart("plate", plate, setPressurePlate, PressurePlate);
 	LoadPart("door", door, setDoor, Door);
 	LoadPart("bollard", bollard, setBollard, Bollard);
+	LoadPart("freestyle", freestyle, setFreestyle, Freestyle);
 	LoadPart("triggerable", triggerable, setTriggerable, Triggerable);
 	LoadPart("spotlight", spotlight, setSpotlight, Spotlight);
 	LoadPart("pointLight", pointLight, setPointLight, PointLight);
@@ -804,6 +815,10 @@ void SceneObject::LoadWithPartsSafe(toml::table table)
 	if (parts & Parts::bollard) {
 		bollardTag = bollard()->triggerTag;
 	}
+	std::string freestyleTag = "";
+	if (parts & Parts::freestyle) {
+		freestyleTag = freestyle()->triggerTag;
+	}
 	std::string triggerableTag = "";
 	if (parts & Parts::triggerable) {
 		triggerableTag = triggerable()->triggerTag;
@@ -833,6 +848,9 @@ void SceneObject::LoadWithPartsSafe(toml::table table)
 	}
 	if (parts & Parts::bollard && bollardTag != "") {
 		bollard()->triggerTag = bollardTag;
+	}
+	if (parts & Parts::freestyle && freestyleTag != "") {
+		freestyle()->triggerTag = freestyleTag;
 	}
 	if (parts & Parts::triggerable && triggerableTag != "") {
 		triggerable()->triggerTag = triggerableTag;

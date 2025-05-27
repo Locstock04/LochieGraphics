@@ -130,6 +130,9 @@ void Scene::DeleteAllSceneObjectsAndParts()
 	bollards.clear();
 	partsChecker &= ~Parts::bollard;
 
+	freestyles.clear();
+	partsChecker &= ~Parts::freestyle;
+
 	// TODO: Don't like how just setting these flags here but no containers atm
 	spotlights.clear();
 	partsChecker &= ~Parts::spotlight;
@@ -194,6 +197,7 @@ toml::table Scene::SaveSceneObjectsAndParts(bool(*shouldSave)(SceneObject*))
 	SavePart(plates);
 	SavePart(doors);
 	SavePart(bollards);
+	SavePart(freestyles);
 	SavePart(triggerables);
 	SavePart(pointLights);
 	SavePart(spotlights);
@@ -214,6 +218,7 @@ toml::table Scene::SaveSceneObjectsAndParts(bool(*shouldSave)(SceneObject*))
 		{ "Plates", savedplates},
 		{ "Doors", saveddoors},
 		{ "Bollards", savedbollards},
+		{ "Freestyles", savedfreestyles},
 		{ "Sync", sync->Serialise() },
 		{ "Ecco", ecco->Serialise() },
 		{ "Triggerables", savedtriggerables},
@@ -308,6 +313,7 @@ void Scene::LoadSceneObjectsAndParts(toml::table& data)
 	LoadPart(plates, "Plates", PressurePlate);
 	LoadPart(doors, "Doors", Door);
 	LoadPart(bollards, "Bollards", Bollard);
+	LoadPart(freestyles, "Freestyles", Freestyle);
 	LoadPart(triggerables, "Triggerables", Triggerable);
 	LoadPart(pointLights, "PointLights", PointLight);
 	LoadPart(spotlights, "Spotlights", Spotlight);
