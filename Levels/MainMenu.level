@@ -1,5 +1,6 @@
 Bollards = []
 Enemies = []
+Freestyles = []
 Plates = []
 SpawnManagers = []
 
@@ -112,7 +113,7 @@ upAnimationGUID = '15148335964655446903'
 [[Animators]]
 currentAnimationGUID = '15148335964655264906'
 guid = '2242071004623144950'
-otherCurrentAnimationGUID = '15148335964655264906'
+otherCurrentAnimationGUID = '15148335964655264905'
 type = '1'
 
 [[Colliders]]
@@ -125,19 +126,19 @@ verts = [ [ 65.0, 115.0 ], [ 65.0, -115.0 ], [ -65.0, -115.0 ], [ -65.0, 115.0 ]
 
 [[Colliders]]
 collisionLayer = 1
-guid = '1766351265130761968'
-isTrigger = false
-radius = 0.0
-type = 1
-verts = [ [ 150.0, 12.5 ], [ 150.0, -313.0 ], [ -150.0, -313.0 ], [ -150.0, 12.5 ] ]
-
-[[Colliders]]
-collisionLayer = 1
 guid = '2134416551236205908'
 isTrigger = false
 radius = 0.0
 type = 1
 verts = [ [ 150.0, 13.0 ], [ 150.0, -313.0 ], [ 0.0, -313.0 ], [ 0.0, 13.0 ] ]
+
+[[Colliders]]
+collisionLayer = 1
+guid = '1766351265130761968'
+isTrigger = false
+radius = 0.0
+type = 1
+verts = [ [ 150.0, 12.5 ], [ 150.0, -313.0 ], [ -150.0, -313.0 ], [ -150.0, 12.5 ] ]
 
 [[Colliders]]
 collisionLayer = 1
@@ -333,19 +334,19 @@ verts = [ [ 150.0, 12.5 ], [ 150.0, -313.0 ], [ -150.0, -313.0 ], [ -150.0, 12.5
 
 [[Colliders]]
 collisionLayer = 1
-guid = '1766413690829227074'
-isTrigger = false
-radius = 0.0
-type = 1
-verts = [ [ 150.0, 12.5 ], [ 150.0, -313.0 ], [ -150.0, -313.0 ], [ -150.0, 12.5 ] ]
-
-[[Colliders]]
-collisionLayer = 1
 guid = '9950962838680294739'
 isTrigger = false
 radius = 0.0
 type = 1
 verts = [ [ 110.0, 15.0 ], [ 110.0, -15.0 ], [ -5.0, -15.0 ], [ -5.0, 15.0 ] ]
+
+[[Colliders]]
+collisionLayer = 1
+guid = '1766413690829227074'
+isTrigger = false
+radius = 0.0
+type = 1
+verts = [ [ 150.0, 12.5 ], [ 150.0, -313.0 ], [ -150.0, -313.0 ], [ -150.0, 12.5 ] ]
 
 [[Colliders]]
 collisionLayer = 1
@@ -919,16 +920,16 @@ timeToOpen = 0.5
 triggerTag = 'Level2DoorTrigger'
 
 [[Exits]]
-guid = '2424082000208527367'
-levelToLoad = 'KK3'
+guid = '9950881729595767653'
+levelToLoad = 'Level_2_ObnoxiousOffice'
 
 [[Exits]]
 guid = '9950798841230073530'
 levelToLoad = 'Tutorial'
 
 [[Exits]]
-guid = '9950881729595767653'
-levelToLoad = 'Level_2_ObnoxiousOffice'
+guid = '2424082000208527367'
+levelToLoad = 'KK3'
 
 [[Exits]]
 guid = '2429031111848239826'
@@ -1273,20 +1274,20 @@ rendersShadows = true
 
 [[Renderers]]
 drawSingleMesh = false
-guid = '15846014292022422799'
-materialTint = [ 1.0, 1.0, 1.0 ]
-materials = [ '0' ]
-meshIndexToDraw = '0'
-modelGuid = '15279751527320231819'
-rendersShadows = true
-
-[[Renderers]]
-drawSingleMesh = false
 guid = '1766410895863482785'
 materialTint = [ 1.0, 1.0, 1.0 ]
 materials = [ '1777838767709883819' ]
 meshIndexToDraw = '0'
 modelGuid = '12471801436435551572'
+rendersShadows = true
+
+[[Renderers]]
+drawSingleMesh = false
+guid = '15846014292022422799'
+materialTint = [ 1.0, 1.0, 1.0 ]
+materials = [ '0' ]
+meshIndexToDraw = '0'
+modelGuid = '15279751527320231819'
 rendersShadows = true
 
 [[Renderers]]
@@ -1624,20 +1625,20 @@ rendersShadows = true
 
 [[Renderers]]
 drawSingleMesh = false
-guid = '15842412498011487628'
-materialTint = [ 1.0, 1.0, 1.0 ]
-materials = [ '0' ]
-meshIndexToDraw = '0'
-modelGuid = '15279751527320231819'
-rendersShadows = true
-
-[[Renderers]]
-drawSingleMesh = false
 guid = '4356589140660526746'
 materialTint = [ 1.0, 1.0, 1.0 ]
 materials = [ '15038846507057049718' ]
 meshIndexToDraw = '0'
 modelGuid = '17948476418088678547'
+rendersShadows = true
+
+[[Renderers]]
+drawSingleMesh = false
+guid = '15842412498011487628'
+materialTint = [ 1.0, 1.0, 1.0 ]
+materials = [ '0' ]
+meshIndexToDraw = '0'
+modelGuid = '15279751527320231819'
 rendersShadows = true
 
 [[Renderers]]
@@ -1921,15 +1922,6 @@ rendersShadows = true
 
 [[Renderers]]
 drawSingleMesh = false
-guid = '2131283247707915891'
-materialTint = [ 1.0, 1.0, 1.0 ]
-materials = [ '0' ]
-meshIndexToDraw = '0'
-modelGuid = '15279751527320231819'
-rendersShadows = true
-
-[[Renderers]]
-drawSingleMesh = false
 guid = '4815236313769197977'
 materialTint = [ 1.0, 1.0, 1.0 ]
 materials = [ '0' ]
@@ -1939,7 +1931,7 @@ rendersShadows = true
 
 [[Renderers]]
 drawSingleMesh = false
-guid = '2131994738832000108'
+guid = '2131283247707915891'
 materialTint = [ 1.0, 1.0, 1.0 ]
 materials = [ '0' ]
 meshIndexToDraw = '0'
@@ -1953,6 +1945,15 @@ materialTint = [ 1.0, 1.0, 1.0 ]
 materials = [ '9920200978339208425', '9920200978339208425' ]
 meshIndexToDraw = '0'
 modelGuid = '9920718423721739425'
+rendersShadows = true
+
+[[Renderers]]
+drawSingleMesh = false
+guid = '2131994738832000108'
+materialTint = [ 1.0, 1.0, 1.0 ]
+materials = [ '0' ]
+meshIndexToDraw = '0'
+modelGuid = '15279751527320231819'
 rendersShadows = true
 
 [[Renderers]]
@@ -2029,20 +2030,20 @@ rendersShadows = true
 
 [[Renderers]]
 drawSingleMesh = false
-guid = '1766351265130761968'
-materialTint = [ 1.0, 1.0, 1.0 ]
-materials = [ '1778108853339578504' ]
-meshIndexToDraw = '0'
-modelGuid = '12471801436435551572'
-rendersShadows = true
-
-[[Renderers]]
-drawSingleMesh = false
 guid = '2134416551236205908'
 materialTint = [ 1.0, 1.0, 1.0 ]
 materials = [ '1777838767709883819' ]
 meshIndexToDraw = '0'
 modelGuid = '12471854257770671342'
+rendersShadows = true
+
+[[Renderers]]
+drawSingleMesh = false
+guid = '1766351265130761968'
+materialTint = [ 1.0, 1.0, 1.0 ]
+materials = [ '1778108853339578504' ]
+meshIndexToDraw = '0'
+modelGuid = '12471801436435551572'
 rendersShadows = true
 
 [[Renderers]]
@@ -2380,20 +2381,20 @@ rendersShadows = true
 
 [[Renderers]]
 drawSingleMesh = false
-guid = '1766413690829227074'
-materialTint = [ 1.0, 1.0, 1.0 ]
-materials = [ '1777838767709883819' ]
-meshIndexToDraw = '0'
-modelGuid = '12471801436435551572'
-rendersShadows = true
-
-[[Renderers]]
-drawSingleMesh = false
 guid = '9950962838680294739'
 materialTint = [ 1.0, 1.0, 1.0 ]
 materials = [ '1766071748038532778' ]
 meshIndexToDraw = '0'
 modelGuid = '12471265708787363967'
+rendersShadows = true
+
+[[Renderers]]
+drawSingleMesh = false
+guid = '1766413690829227074'
+materialTint = [ 1.0, 1.0, 1.0 ]
+materials = [ '1777838767709883819' ]
+meshIndexToDraw = '0'
+modelGuid = '12471801436435551572'
 rendersShadows = true
 
 [[Renderers]]
@@ -3534,34 +3535,6 @@ vel = [ 0.0, 0.0 ]
 accel = [ 0.0, 0.0 ]
 angularVel = 0.0
 elasticicty = 0.0
-guid = '2133311341907588582'
-invMass = 0.0
-invMomentOfInertia = 0.0
-isStatic = true
-netDepen = [ 0.0, 0.0 ]
-netForce = [ 0.0, 0.0 ]
-vel = [ 0.0, 0.0 ]
-
-    [[RigidBodies.colliders]]
-    collisionLayer = 1
-    guid = '2133311341907588582'
-    isTrigger = false
-    radius = 0.0
-    type = 1
-    verts = [ [ 150.0, 12.5 ], [ 150.0, -312.5 ], [ -312.5, -312.5 ], [ -312.5, 12.5 ] ]
-
-    [[RigidBodies.colliders]]
-    collisionLayer = 1
-    guid = '2133311341907588582'
-    isTrigger = false
-    radius = 0.0
-    type = 1
-    verts = [ [ 12.5, 150.0 ], [ 12.5, -312.5 ], [ -312.5, -312.5 ], [ -312.5, 150.0 ] ]
-
-[[RigidBodies]]
-accel = [ 0.0, 0.0 ]
-angularVel = 0.0
-elasticicty = 0.0
 guid = '9950857971208633886'
 invMass = 0.0
 invMomentOfInertia = 0.0
@@ -3593,6 +3566,34 @@ vel = [ 0.0, 0.0 ]
     radius = 0.0
     type = 1
     verts = [ [ 150.0, -65.0 ], [ 150.0, -275.0 ], [ -150.0, -275.0 ], [ -150.0, -65.0 ] ]
+
+[[RigidBodies]]
+accel = [ 0.0, 0.0 ]
+angularVel = 0.0
+elasticicty = 0.0
+guid = '2133311341907588582'
+invMass = 0.0
+invMomentOfInertia = 0.0
+isStatic = true
+netDepen = [ 0.0, 0.0 ]
+netForce = [ 0.0, 0.0 ]
+vel = [ 0.0, 0.0 ]
+
+    [[RigidBodies.colliders]]
+    collisionLayer = 1
+    guid = '2133311341907588582'
+    isTrigger = false
+    radius = 0.0
+    type = 1
+    verts = [ [ 150.0, 12.5 ], [ 150.0, -312.5 ], [ -312.5, -312.5 ], [ -312.5, 12.5 ] ]
+
+    [[RigidBodies.colliders]]
+    collisionLayer = 1
+    guid = '2133311341907588582'
+    isTrigger = false
+    radius = 0.0
+    type = 1
+    verts = [ [ 12.5, 150.0 ], [ 12.5, -312.5 ], [ -312.5, -312.5 ], [ -312.5, 150.0 ] ]
 
 [[RigidBodies]]
 accel = [ 0.0, 0.0 ]
@@ -6495,15 +6496,11 @@ prefabBase = '2091576976424546894'
 prefabStatus = 2
 
 [[ShadowWalls]]
-guid = '1765955846496463170'
-hasLocalMesh = true
-
-[[ShadowWalls]]
 guid = '1766384413052974086'
 hasLocalMesh = true
 
 [[ShadowWalls]]
-guid = '1765975110721584351'
+guid = '1765955846496463170'
 hasLocalMesh = true
 
 [[ShadowWalls]]
@@ -6511,11 +6508,11 @@ guid = '2146691644486822829'
 hasLocalMesh = true
 
 [[ShadowWalls]]
-guid = '1766343111488244609'
+guid = '1765975110721584351'
 hasLocalMesh = true
 
 [[ShadowWalls]]
-guid = '2134416551236205908'
+guid = '1766343111488244609'
 hasLocalMesh = true
 
 [[ShadowWalls]]
@@ -6523,11 +6520,11 @@ guid = '1766351265130761968'
 hasLocalMesh = true
 
 [[ShadowWalls]]
-guid = '2132996577229551384'
+guid = '2134416551236205908'
 hasLocalMesh = true
 
 [[ShadowWalls]]
-guid = '1766525282526673543'
+guid = '2132996577229551384'
 hasLocalMesh = true
 
 [[ShadowWalls]]
@@ -6535,15 +6532,19 @@ guid = '4815079549951218438'
 hasLocalMesh = true
 
 [[ShadowWalls]]
+guid = '1766525282526673543'
+hasLocalMesh = true
+
+[[ShadowWalls]]
 guid = '2132915612481005301'
 hasLocalMesh = true
 
 [[ShadowWalls]]
-guid = '2133189641299905419'
+guid = '4817909311990363839'
 hasLocalMesh = true
 
 [[ShadowWalls]]
-guid = '4817909311990363839'
+guid = '2133189641299905419'
 hasLocalMesh = true
 
 [[ShadowWalls]]
@@ -6571,11 +6572,11 @@ guid = '2133454581350904376'
 hasLocalMesh = true
 
 [[ShadowWalls]]
-guid = '2146742968651364576'
+guid = '4817863142650682745'
 hasLocalMesh = true
 
 [[ShadowWalls]]
-guid = '4817863142650682745'
+guid = '2146742968651364576'
 hasLocalMesh = true
 
 [[ShadowWalls]]
@@ -6703,12 +6704,12 @@ guid = '2133250345793367252'
 hasLocalMesh = true
 
 [[ShadowWalls]]
-guid = '2133311341907588582'
-hasLocalMesh = true
-
-[[ShadowWalls]]
 guid = '9950857971208633886'
 hasLocalMesh = false
+
+[[ShadowWalls]]
+guid = '2133311341907588582'
+hasLocalMesh = true
 
 [[ShadowWalls]]
 guid = '2133326796682457802'
@@ -6806,21 +6807,6 @@ triggerTag = ''
 [[Spotlights]]
 canBeTriggered = false
 castsShadows = true
-colour = [ 1.0, 0.0, 0.0 ]
-cutOff = 1.0
-effect = 0
-guid = '12518496881270751768'
-intensity = 90.0
-linear = 0.8208571672439575
-on = true
-outerCutOff = 0.06400000303983688
-quadratic = 3.2100000381469727
-range = 4.179999828338623
-triggerTag = ''
-
-[[Spotlights]]
-canBeTriggered = false
-castsShadows = true
 colour = [ 1.0, 1.0, 1.0 ]
 cutOff = 0.6060000061988831
 effect = 0
@@ -6831,6 +6817,21 @@ on = true
 outerCutOff = 0.5910000205039978
 quadratic = 3.4499998092651367
 range = 3.700000047683716
+triggerTag = ''
+
+[[Spotlights]]
+canBeTriggered = false
+castsShadows = true
+colour = [ 1.0, 0.0, 0.0 ]
+cutOff = 1.0
+effect = 0
+guid = '12518496881270751768'
+intensity = 90.0
+linear = 0.8208571672439575
+on = true
+outerCutOff = 0.06400000303983688
+quadratic = 3.2100000381469727
+range = 4.179999828338623
 triggerTag = ''
 
 [[Spotlights]]
@@ -8414,9 +8415,9 @@ scale = [ 1.0, 1.0, 1.0 ]
 euler = [ 0.0, -0.0, 0.6161134839057922 ]
 guid = '9971399269755168576'
 isStatic = true
-position = [ 1.1194145679473877, -4.379263877868652, 0.9713840484619141 ]
+position = [ 1.200238823890686, 3.3472096920013428, 0.4546378552913666 ]
 quaternion = [ 0.9999855756759644, 0.0, 0.0, 0.0053765783086419106 ]
-scale = [ 1.0, 1.0, 1.0 ]
+scale = [ 0.9999998211860657, 0.9999998211860657, 1.0 ]
 
 [[Transforms]]
 euler = [ -0.0, -0.0, -0.0 ]
@@ -8435,12 +8436,12 @@ quaternion = [ 0.9325461983680725, 0.36105072498321533, 6.73721700650276e-09, -1
 scale = [ 0.9999998807907104, 1.0000492334365845, 0.9999468922615051 ]
 
 [[Transforms]]
-euler = [ -8.243348121643066, 6.800557457609102e-06, 7.94126208347734e-06 ]
+euler = [ -8.243348121643066, 7.379525413853116e-06, 9.54765982896788e-06 ]
 guid = '9971409515390685127'
 isStatic = true
-position = [ -9.640934877097607e-07, -6.185356140136719, 7.829074859619141 ]
-quaternion = [ 0.9974136352539062, -0.07187476009130478, 5.421160764740307e-08, 7.338682905810856e-08 ]
-scale = [ 1.0500000715255737, 1.0499999523162842, 1.0500001907348633 ]
+position = [ -9.640925782150589e-07, -6.185356140136719, 7.829078674316406 ]
+quaternion = [ 0.9974136352539062, -0.07187476009130478, 5.8243411871217177e-08, 8.773218240776259e-08 ]
+scale = [ 1.0500003099441528, 1.0499999523162842, 1.0500003099441528 ]
 
 [[Transforms]]
 euler = [ 0.0, -0.0, 0.0 ]
@@ -8575,6 +8576,14 @@ euler = [ 33.40937805175781, -89.95977783203125, -125.05997467041016 ]
 guid = '13061842933313512270'
 isStatic = true
 position = [ -2839.504150390625, 161.7069091796875, -3170.814208984375 ]
+quaternion = [ 0.49279260635375977, -0.5069061517715454, -0.49269992113113403, -0.5073937177658081 ]
+scale = [ 0.9999672770500183, 1.0, 0.9999768137931824 ]
+
+[[Transforms]]
+euler = [ 33.40937805175781, -89.95977783203125, -125.05997467041016 ]
+guid = '13063130975313464837'
+isStatic = true
+position = [ -738.045166015625, 130.36073303222656, -3267.72021484375 ]
 quaternion = [ 0.49279260635375977, -0.5069061517715454, -0.49269992113113403, -0.5073937177658081 ]
 scale = [ 0.9999672770500183, 1.0, 0.9999768137931824 ]
 
@@ -9195,11 +9204,11 @@ quaternion = [ 1.0, 0.0, 0.0, 0.0 ]
 scale = [ 1.0, 1.0, 1.0 ]
 
 [[Transforms]]
-euler = [ 0.0, -55.00001525878906, 0.0 ]
+euler = [ -360.0, 34.543540954589844, 0.0 ]
 guid = '18133337472315591294'
 isStatic = false
-position = [ 155.81838989257812, 0.0, -1965.58203125 ]
-quaternion = [ 0.8870107531547546, 0.0, -0.46174874901771545, 0.0 ]
+position = [ 26.386898040771484, 0.0, -2179.34326171875 ]
+quaternion = [ -0.9549071788787842, 8.348063573748732e-08, -0.29690444469451904, -2.595621140244475e-08 ]
 scale = [ 0.9999993443489075, 0.9999998807907104, 0.9999992847442627 ]
 
 [[Transforms]]
@@ -9210,13 +9219,12 @@ position = [ 708.4098510742188, -0.00390625, -2393.1416015625 ]
 quaternion = [ 0.7071069478988647, 0.0, -0.7071066498756409, 0.0 ]
 scale = [ 0.999975323677063, 1.0, 0.999975323677063 ]
 
-[[Transforms]]
-euler = [ 33.40937805175781, -89.95977783203125, -125.05997467041016 ]
-guid = '13063130975313464837'
-isStatic = true
-position = [ -738.045166015625, 130.36073303222656, -3267.72021484375 ]
-quaternion = [ 0.49279260635375977, -0.5069061517715454, -0.49269992113113403, -0.5073937177658081 ]
-scale = [ 0.9999672770500183, 1.0, 0.9999768137931824 ]
+[[Triggerables]]
+bothPlayersNeeded = true
+doesntSendFalseEveryFrame = false
+falseIsTrue = false
+guid = '9950881729595767653'
+triggerTag = 'Level2DoorTrigger'
 
 [[Triggerables]]
 bothPlayersNeeded = true
@@ -9224,13 +9232,6 @@ doesntSendFalseEveryFrame = false
 falseIsTrue = false
 guid = '9950798841230073530'
 triggerTag = 'TutorialDoorTrigger'
-
-[[Triggerables]]
-bothPlayersNeeded = true
-doesntSendFalseEveryFrame = false
-falseIsTrue = false
-guid = '9950881729595767653'
-triggerTag = 'Level2DoorTrigger'
 
 [[Triggerables]]
 bothPlayersNeeded = true

@@ -344,6 +344,7 @@
     <ClCompile Include="Door.cpp" />
     <ClCompile Include="DoorAndBollardSystem.cpp" />
     <ClCompile Include="Freestyle.cpp" />
+    <ClCompile Include="FreestyleSystem.cpp" />
     <ClCompile Include="Frustum.cpp" />
     <ClCompile Include="glad.c" />
     <ClCompile Include="HealthRangeCondition.cpp" />
@@ -389,6 +390,7 @@
     <ClInclude Include="Door.h" />
     <ClInclude Include="DoorAndBollardSystem.h" />
     <ClInclude Include="Freestyle.h" />
+    <ClInclude Include="FreestyleSystem.h" />
     <ClInclude Include="Frustum.h" />
     <ClInclude Include="glad.h" />
     <ClInclude Include="HealthRangeCondition.h" />

@@ -1,4 +1,4 @@
-advancedTransformInfo = false
+advancedTransformInfo = true
 camBoomTruck = 0.05000000074505806
 camMove = 2500.0
 camMoveDolly = 0.10000000149011612

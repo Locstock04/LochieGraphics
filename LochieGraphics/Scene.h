@@ -27,6 +27,7 @@
 #include "TriggerSystem.h"
 #include "DoorAndBollardSystem.h"
 #include "ParticleSystem.h"
+#include "FreestyleSystem.h"
 #include "GUI.h"
 #include "Audio.h"
 
@@ -101,6 +102,7 @@ public:
 	TriggerSystem triggerSystem;
 	DoorAndBollardSystem dabSystem;
 	ParticleSystem particleSystem;
+	FreestyleSystem fsSystem;
 	Audio audio;
 
 	virtual void Start() {};

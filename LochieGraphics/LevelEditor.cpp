@@ -256,6 +256,28 @@ void LevelEditor::Update(float delta)
 
 		renderSystem.PlayStart(pointLights, spotlights);
 
+		fsSystem.Start(
+			transforms,
+			renderers,
+			*ecco,
+			*sync,
+			healths,
+			animators,
+			rigidBodies,
+			exits,
+			spawnManagers,
+			plates,
+			doors,
+			bollards,
+			triggerables,
+			pointLights,
+			spotlights,
+			decals,
+			enemies,
+			shadowWalls,
+			freestyles
+		);
+
 		state = BrushState::none;
 
 		camera->nearPlane = 5000.0f;
@@ -418,6 +440,29 @@ void LevelEditor::Update(float delta)
 		animators,
 		eccoSo->transform()->get2DGlobalPosition(),
 		syncSo->transform()->get2DGlobalPosition(),
+		delta
+	);
+
+	fsSystem.Update(
+		transforms,
+		renderers,
+		*ecco,
+		*sync,
+		healths,
+		animators,
+		rigidBodies,
+		exits,
+		spawnManagers,
+		plates,
+		doors,
+		bollards,
+		triggerables,
+		pointLights,
+		spotlights,
+		decals,
+		enemies,
+		shadowWalls,
+		freestyles,
 		delta
 	);
 

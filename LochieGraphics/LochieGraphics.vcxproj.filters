@@ -470,6 +470,9 @@
     <ClCompile Include="Freestyle.cpp">
       <Filter>Source Files\Parts</Filter>
     </ClCompile>
+    <ClCompile Include="FreestyleSystem.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Server.h">
@@ -845,6 +848,7 @@
     <ClInclude Include="Freestyle.h">
       <Filter>Source Files\Parts</Filter>
     </ClInclude>
+    <ClInclude Include="FreestyleSystem.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="..\Shaders\cubemap.frag">
